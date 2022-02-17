@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import TextInput from './components/TextInput'
 
 const validate = (values) => {
   const errors = {};
@@ -32,17 +33,11 @@ function App() {
       onSubmit={(values) => console.log(values)}
     >
       <Form>
-        <label>Nombre</label>
-        <Field name="name" type="text" />
-        <ErrorMessage name="name" />
+        <TextInput name="name" label="Nombre"/>
         <br />
-        <label>Apellido</label>
-        <Field name="lastname" type="text" />
-        <ErrorMessage name="lastname" />
+        <TextInput name="lastname" label="Apellido"/>
         <br />
-        <label>Email</label>
-        <Field name="email" type="email" />
-        <ErrorMessage name="email" />
+        <TextInput name="email" label="Email"/>
         <br />
         <button type="submit">Enviar</button>
       </Form>

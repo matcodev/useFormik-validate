@@ -3,7 +3,7 @@ import { useField } from "formik";
 const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
 
-  console.log({ field, meta })
+  //console.log({ field, meta })
   return (
     <div>
       <label>{label}</label>
